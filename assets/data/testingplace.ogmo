@@ -1,0 +1,383 @@
+{
+  "name": "SidescrollRPGTest",
+  "ogmoVersion": "3.4.0",
+  "levelPaths": ["."],
+  "backgroundColor": "#282c34ff",
+  "gridColor": "#3c4049cc",
+  "anglesRadians": true,
+  "directoryDepth": 5,
+  "layerGridDefaultSize": {"x": 8, "y": 8},
+  "levelDefaultSize": {"x": 320, "y": 240},
+  "levelMinSize": {"x": 128, "y": 128},
+  "levelMaxSize": {"x": 4096, "y": 4096},
+  "levelValues": [],
+  "defaultExportMode": ".json",
+  "compactExport": false,
+  "externalScript": "",
+  "playCommand": "",
+  "entityTags": ["warps", "hallways", "doors", "chars"],
+  "layers": [
+    {
+      "definition": "entity",
+      "name": "spawns",
+      "gridSize": {"x": 16, "y": 16},
+      "exportID": "04285161",
+      "requiredTags": [],
+      "excludedTags": []
+    },
+    {
+      "definition": "entity",
+      "name": "interactables",
+      "gridSize": {"x": 16, "y": 16},
+      "exportID": "04283568",
+      "requiredTags": [],
+      "excludedTags": []
+    },
+    {
+      "definition": "tile",
+      "name": "foreground",
+      "gridSize": {"x": 16, "y": 16},
+      "exportID": "04286974",
+      "exportMode": 0,
+      "arrayMode": 0,
+      "defaultTileset": ""
+    },
+    {
+      "definition": "tile",
+      "name": "collisions",
+      "gridSize": {"x": 16, "y": 16},
+      "exportID": "04282467",
+      "exportMode": 0,
+      "arrayMode": 0,
+      "defaultTileset": ""
+    },
+    {
+      "definition": "tile",
+      "name": "background",
+      "gridSize": {"x": 16, "y": 16},
+      "exportID": "04282123",
+      "exportMode": 0,
+      "arrayMode": 0,
+      "defaultTileset": "grass"
+    },
+    {
+      "definition": "tile",
+      "name": "backerground",
+      "gridSize": {"x": 16, "y": 16},
+      "exportID": "04768720",
+      "exportMode": 0,
+      "arrayMode": 0,
+      "defaultTileset": "hills"
+    }
+  ],
+  "entities": [
+    {
+      "exportID": "04315197",
+      "name": "warp_0",
+      "limit": 1,
+      "size": {"x": 16, "y": 16},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ff0000ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 16, "y": 16},
+      "resizeableX": true,
+      "resizeableY": true,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": ["warps"],
+      "values": []
+    },
+    {
+      "exportID": "04312678",
+      "name": "warp_1",
+      "limit": 1,
+      "size": {"x": 16, "y": 16},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#0000ffff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 16, "y": 16},
+      "resizeableX": true,
+      "resizeableY": true,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": ["warps"],
+      "values": []
+    },
+    {
+      "exportID": "04311219",
+      "name": "hallway_0",
+      "limit": 1,
+      "size": {"x": 16, "y": 16},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ff0000ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 16, "y": 16},
+      "resizeableX": true,
+      "resizeableY": true,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": ["hallways"],
+      "values": [
+        {"name": "targetRoom", "definition": "String", "display": 1, "defaults": "g0", "maxLength": 0, "trimWhitespace": true}
+      ]
+    },
+    {
+      "exportID": "04316251",
+      "name": "hallway_1",
+      "limit": 1,
+      "size": {"x": 16, "y": 16},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#0000ffff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 16, "y": 16},
+      "resizeableX": true,
+      "resizeableY": true,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": ["hallways"],
+      "values": [
+        {"name": "targetRoom", "definition": "String", "display": 1, "defaults": "g0", "maxLength": 0, "trimWhitespace": true}
+      ]
+    },
+    {
+      "exportID": "04323694",
+      "name": "door_0",
+      "limit": 1,
+      "size": {"x": 16, "y": 16},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ff0000ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 16, "y": 16},
+      "resizeableX": true,
+      "resizeableY": true,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": ["doors"],
+      "values": [
+        {"name": "targetRoom", "definition": "String", "display": 1, "defaults": "g0", "maxLength": 0, "trimWhitespace": true}
+      ]
+    },
+    {
+      "exportID": "04324442",
+      "name": "door_1",
+      "limit": 1,
+      "size": {"x": 16, "y": 16},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#0000ffff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 16, "y": 16},
+      "resizeableX": true,
+      "resizeableY": true,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": ["doors"],
+      "values": [
+        {"name": "targetRoom", "definition": "String", "display": 1, "defaults": "g0", "maxLength": 0, "trimWhitespace": true}
+      ]
+    },
+    {
+      "exportID": "05102390",
+      "name": "dialogueInteraction",
+      "limit": -1,
+      "size": {"x": 16, "y": 16},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#00ffe3ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 16, "y": 16},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": [],
+      "values": [
+        {"name": "dialogueText", "definition": "String", "display": 2, "defaults": "test", "maxLength": 0, "trimWhitespace": true}
+      ]
+    },
+    {
+      "exportID": "11669361",
+      "name": "hoodGuy",
+      "limit": -1,
+      "size": {"x": 16, "y": 32},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ff0000ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 16, "y": 32},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": ["chars"],
+      "values": [
+        {"name": "color", "definition": "Color", "display": 1, "defaults": "#ffffffff", "includeAlpha": false},
+        {"name": "dialogue", "definition": "String", "display": 2, "defaults": "test", "maxLength": 0, "trimWhitespace": true}
+      ]
+    }
+  ],
+  "tilesets": [
+    {"label": "grass", "path": "../images/tilesets/grass.png", "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAAAQCAMAAADOKAZSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAASUExURWq+MGY5MUUoPJnlUI9WOwAAAI6Qzv0AAAAGdFJOU///////ALO/pL8AAAAJcEhZcwAAG1gAABtYAQ1wz8cAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuMvu8A7YAAAC2ZVhJZklJKgAIAAAABQAaAQUAAQAAAEoAAAAbAQUAAQAAAFIAAAAoAQMAAQAAAAMAAAAxAQIAEAAAAFoAAABphwQAAQAAAGoAAAAAAAAARgAAAAEAAABGAAAAAQAAAFBhaW50Lk5FVCA1LjEuMgADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlAAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAAD/S6KXtTBKEAAAAIJJREFUSEvtkjEOgDAMA5MA//8ylbCixB4Yihigl6G4Ua0bsIOxBmdG1k4ETkDRgy9EyLaGUWZkjd5kCeFM0JtMCwX+BRCUGVmjN5kX2htBmZE1epMlhDNBb/JFIa8zhErSifJ9DTEvVLrHjAcl6Ygv84BQQx4QN+sl9IIQ7pOfC7mfMbwR5eUvAyAAAAAASUVORK5CYII=", "tileWidth": 16, "tileHeight": 16, "tileSeparationX": 0, "tileSeparationY": 0, "tileMarginX": 0, "tileMarginY": 0},
+    {"label": "hills", "path": "../images/tilesets/hills.png", "image": "data:image/png;base64,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", "tileWidth": 16, "tileHeight": 16, "tileSeparationX": 0, "tileSeparationY": 0, "tileMarginX": 0, "tileMarginY": 0},
+    {"label": "clouds", "path": "../images/tilesets/clouds.png", "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAAgCAMAAADKd1bWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAMUExURabL/////9L//QAAAN1BrgEAAAAEdFJOU////wBAKqn0AAAACXBIWXMAABtYAAAbWAENcM/HAAAAGHRFWHRTb2Z0d2FyZQBQYWludC5ORVQgNS4xLjL7vAO2AAAAtmVYSWZJSSoACAAAAAUAGgEFAAEAAABKAAAAGwEFAAEAAABSAAAAKAEDAAEAAAADAAAAMQECABAAAABaAAAAaYcEAAEAAABqAAAAAAAAAEYAAAABAAAARgAAAAEAAABQYWludC5ORVQgNS4xLjIAAwAAkAcABAAAADAyMzABoAMAAQAAAAEAAAAFoAQAAQAAAJQAAAAAAAAAAgABAAIABAAAAFI5OAACAAcABAAAADAxMDAAAAAA/0uil7UwShAAAALXSURBVGhD5ZiBcuMwCER9l///57KwyBhJlpST08zc69SViIBl7XSaHq//nOcNOBRuvo+nlR3HH+VrLXhSF+68jQ/efA6Q9l7mHI9VFtE2+F98CVivDlKKwD7GFoBzBgMNnjLApw9oYKQnEp8fYdECacNEwXvWNbYbYAN6b85ulAdhbpbr+GAqy2FOAckSzDW2GlD66lWHzthbYmYWTqAZUks3w6w8N/MUiks1NhqQmnPiJvLyqDE99DLq2igrKrBU2B08wOYpA/L4rtylR0d02+6Mh0jfIFKOpwmTyoEaKtDDmuJYXGLQ8pAB1tz72U+gYYcxi7Y6u4syolz1ZLkwCxccYEagSID7Zy9SAqnxJgOoK44OGCxcRmFq4KyCb3IuNexU6ZpcD54iVeZWA9jkRKNXIEgXdecyPyZlBRDm4utC2wCcCy6gUKwEUuqjBmiwQz0AamBY6Haw1SkYworkAirBzmhOOKupXlX2MXWjAVZfsLVc0LxDJb9pocYU6ucOdA0AeqKAZLdRAyF3kwGvgwqr5j2ujU190e8g5nCEkyT9dDAfBN3cbQZ0W/e4dKb64IAGMpdols5HwIQkcmC7AdK8L7tDaH3ePUO3Izcr6aGKru4oydsMmOt74extNw81FurU0vkMzORvNuCdB6BtAIpMFsrS+cfTnJL9BszKDoTe6oCg4ufqVPMjOJ3/jAGLDjQMkCq42PqepNwq6Pxz6cz/RQMurf1TAMpwdU8WrvnQMC3CKuwzYPLGFaoJzIPZXwFNA+b9A1pijwHefoFWY1TBAOMZGp8GeRMW7sIvGtD5RD9dpZ29KsKy9PrvzDbHfzM6/8+4LyJZXAmdAj0L6vgpYpcBUfzNHPftWomQCuLL/So4yUPEcnEFXo/HhXtFK3hnqa49bJcYtDtrFPiKwtCwSIRBUucOii1x7Wg7YnON5hfsODef4EO9bK5PDjbLN2r6IK/XD2E1RzitFimWAAAAAElFTkSuQmCC", "tileWidth": 64, "tileHeight": 32, "tileSeparationX": 0, "tileSeparationY": 0, "tileMarginX": 0, "tileMarginY": 0},
+    {"label": "bushes", "path": "../images/tilesets/bushes.png", "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAAgCAMAAADKd1bWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJUExURQB/DhGeHwAAAAjqHicAAAADdFJOU///ANfKDUEAAAAJcEhZcwAAG1gAABtYAQ1wz8cAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuMvu8A7YAAAC2ZVhJZklJKgAIAAAABQAaAQUAAQAAAEoAAAAbAQUAAQAAAFIAAAAoAQMAAQAAAAMAAAAxAQIAEAAAAFoAAABphwQAAQAAAGoAAAAAAAAARgAAAAEAAABGAAAAAQAAAFBhaW50Lk5FVCA1LjEuMgADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlAAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAAD/S6KXtTBKEAAAAUhJREFUaEPtlNsOwyAMQ1n//6PHxaWU0JLQIJDAL2xoduLTbeZYXBsAzmW1AeBcVhsAzmW1AeBcVhsAzmW1AeDsJ+OFN/Op92bG/LymRdBzL/fkQ32nxu+Bs7U5eeqWbJdG80TSIldIEwNHLggXBfUCUGjvVdsnVYZQiMCOgdHqnEkz1AGEgk/9IVYXmsFynYInypntZZ6hCiDOrfS3qs8tZVRdtPclLJdlKAJ4G05VG1wOe3exNugFQFbfqjzZfYn8D+QJQPwAFW+DTgCk9csAToq2YnhBFD8ARyLuCnerEgB5/xIASQqxs83zAhCFtAO4W4cBoAWEGXmAwJ5aRwEg639PwD1HiVcJwFcCYrtVtroo4vIOA3DfXwGAKEMdwMcCLXYCoI3AQADpY8CNSHR1QYwygKYC2gBE/6OTAWgJIP1xzxPcx/EHDjM2quD+tTIAAAAASUVORK5CYII=", "tileWidth": 64, "tileHeight": 32, "tileSeparationX": 0, "tileSeparationY": 0, "tileMarginX": 0, "tileMarginY": 0},
+    {"label": "casupola", "path": "../images/tilesets/casupola.png", "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAABACAMAAADlCI9NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAbUExURT0mDEgwHkEsG2RFLls/Ko73/2VGLlA1IQAAANdNUxAAAAAJdFJOU///////////AFNPeBIAAAAJcEhZcwAAG1gAABtYAQ1wz8cAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuMvu8A7YAAAC2ZVhJZklJKgAIAAAABQAaAQUAAQAAAEoAAAAbAQUAAQAAAFIAAAAoAQMAAQAAAAIAAAAxAQIAEAAAAFoAAABphwQAAQAAAGoAAAAAAAAAiLYCAOgDAACItgIA6AMAAFBhaW50Lk5FVCA1LjEuMgADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlAAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAAAls45Uk55nMgAAAWtJREFUaEPtlOuuhCAMhFFZ9f2f+EynhUXcZC9Ren70SxZYS8owtqa9I43Gzq2kSZgBFykthZzxSxqXDZzP8Qfp50r3/4UAyTRZzmXBAblFD8RZOc8yn+Ml8XGufCAAaaaa9YUAW+mmGwRIms8EyJC4/8lVAphMOB9gi3sFzEwm/AMBqHjWu1S+VL0FbNOzKzgi/i12bsUSFvDO8dLbrrBA14boC3Ok3Ow4V947oAmB9bUU3aEoJYJQGyeXCWC2glr+TVeUxMe58qMAroUBApis8l6ALe4V0HbFcAFNyYPmQMI2VSQ8XyDAG9MxDFq6AvFzg6X2fBjyDjfAFwx8HNACpg0eDtjt1Qe3GsCICnCqAfVAC8HFgVXuThc2JwcK8MDHgVICmD0caL4CLjWw8itAF7DwqQF1gKOTA3p7ccHJAf0KyspBQIc9H8bwA3tCQAgIASEgBISAEBACQkAICAEhIASEgBDgLGDf/wCMSdeKJJ21eAAAAABJRU5ErkJggg==", "tileWidth": 16, "tileHeight": 16, "tileSeparationX": 0, "tileSeparationY": 0, "tileMarginX": 0, "tileMarginY": 0}
+  ]
+}
